@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+.app.dark {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: #1e293b;
+  color: white;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  opacity: 0.7;
+}
+
+/* Buttons */
+
+button {
+  padding: 8px 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Container */
+
+.container {
+  padding: 40px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Card */
+
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  margin: 15px 0;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.app.dark .card {
+  background: #1f1f1f;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
