@@ -1,17 +1,18 @@
-import { useContext } from "react";
-import { AppContext } from "../context/AppContext";
+import React from "react";
+import { useDispatch } from "react-redux";
+import { addItem } from "../redux/slices/cartSlice";
 
 const ProductCard = ({ product }) => {
-  const { dispatch } = useContext(AppContext);
+  const dispatch = useDispatch();
 
   return (
     <div className="card">
-      <h3>{product.name}</h3>
-      <p>₹ {product.price}</p>
+      <h3>{product.title}</h3>
+      <p>Price: ₹{product.price}</p>
+
       <button
-        onClick={() =>
-          dispatch({ type: "ADD_TO_CART", payload: product })
-        }
+        className="button-primary"
+        onClick={() => dispatch(addItem(product))}
       >
         Add to Cart
       </button>
